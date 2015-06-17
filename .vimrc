@@ -1,0 +1,88 @@
+syn on                      "语法支持
+set ruler                   "在编辑过程中，在右下角显示光标位置的状态行
+set nocompatible            "去掉有关 vi一致性模式
+set incsearch               " 输入搜索内容时就显示搜索结果
+"set hlsearch                " 搜索时高亮显示被找到的文本
+"set nohlsearch              "搜索时不高亮显示被找到的文本
+"高亮显示之后输入:noh 可以关掉高亮
+set showcmd                 " 输入的命令显示出来，看的清楚些
+set ignorecase smartcase    " 搜索时忽略大小写，但在有一个或以上大写字母时仍保持对大小写敏感
+set smartindent             " 开启新行时使用智能自动缩进
+set autoindent              " 使用自动对起，即把当前行的对起格式应用到下一行
+set laststatus=2            " 显示状态栏 (默认值为 1, 无法显示状态栏)
+set history=1000            "设置VIM记录的历史数
+
+"common conf {{             通用配置
+set si                      "自动缩进
+set bs=2                    "在insert模式下用退格键删除
+set showmatch               "代码匹配
+set laststatus=2            "总是显示状态行
+set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
+set shiftwidth=4
+set tabstop=4
+set cursorline              "为光标所在行加下划线
+set number                  "显示行号
+set autoread                "文件在Vim之外修改过，自动重新读入
+
+set ignorecase              "检索时忽略大小写
+set hls                     "检索时高亮显示匹配项
+set fileencodings=utf-8,gbk
+set helplang=cn             "帮助系统设置为中文
+set foldmethod=syntax       "代码折叠
+""}}
+
+"conf for tabs, 为标签页进行的配置，通过ctrl h/l切换标签等
+let mapleader = ','
+nnoremap <C-l> gt
+nnoremap <C-h> gT
+nnoremap <leader>t : tabe<CR>
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+"Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+"Plugin 'user/L9', {'name': 'newL9'}
+"
+Bundle "scrooloose/syntastic"
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/nerdtree'
+map <C-f> :NERDTree<CR>
+Bundle 'kien/ctrlp.vim.git'
+Bundle 'bling/vim-airline'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
