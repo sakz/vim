@@ -20,7 +20,7 @@ set laststatus=2            "总是显示状态行
 set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
 set shiftwidth=4
 set tabstop=4
-set cursorline              "为光标所在行加下划线
+"set cursorline              "为光标所在行加下划线
 set number                  "显示行号
 set autoread                "文件在Vim之外修改过，自动重新读入
 
@@ -68,9 +68,10 @@ Plugin 'gmarik/Vundle.vim'
 Bundle "scrooloose/syntastic"
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdtree'
-map <C-f> :NERDTree<CR>
 Bundle 'kien/ctrlp.vim.git'
+map <C-n> :NERDTree<CR>
 Bundle 'bling/vim-airline'
+Bundle 'szw/vim-ctrlspace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
