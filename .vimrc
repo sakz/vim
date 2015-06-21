@@ -11,6 +11,8 @@ set smartindent             " 开启新行时使用智能自动缩进
 set autoindent              " 使用自动对起，即把当前行的对起格式应用到下一行
 set laststatus=2            " 显示状态栏 (默认值为 1, 无法显示状态栏)
 set history=1000            "设置VIM记录的历史数
+set backupdir=/tmp          "设置备份文件目录
+set directory=/tmp          "设置临时文件目录
 
 "common conf {{             通用配置
 set si                      "自动缩进
@@ -18,12 +20,11 @@ set bs=2                    "在insert模式下用退格键删除
 set showmatch               "代码匹配
 set laststatus=2            "总是显示状态行
 set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
-set shiftwidth=4
+set shiftwidth=4                
 set tabstop=4
 "set cursorline              "为光标所在行加下划线
 set number                  "显示行号
 set autoread                "文件在Vim之外修改过，自动重新读入
-
 set ignorecase              "检索时忽略大小写
 set hls                     "检索时高亮显示匹配项
 set fileencodings=utf-8,gbk
