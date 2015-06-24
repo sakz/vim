@@ -1,5 +1,7 @@
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"  "youcompleteme必需
+
 syn on                      "语法支持
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 set ruler                   "在编辑过程中，在右下角显示光标位置的状态行
 set nocompatible            "去掉有关 vi一致性模式
 set incsearch               " 输入搜索内容时就显示搜索结果
@@ -71,10 +73,11 @@ Bundle "scrooloose/syntastic"
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim.git'
-map <C-n> :NERDTree<CR>
+map <C-n> :NERDTree<CR>    "设置ctrl+n 快捷打开nerdtree
 Bundle 'bling/vim-airline'
 Bundle 'szw/vim-ctrlspace'
 Bundle 'SuperTab'
+imap jj <esc>    "双击jj退出编辑模式,c-[ 和c-c也可以实现esc
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
