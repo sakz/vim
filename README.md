@@ -1,2 +1,6 @@
 # 我的vimrc
 都是些通用的配置和几个必备的插件。
+
+Mac使用youcompleteme补全插件
+
+Ubuntu使用clang_complete和autocomplpop
