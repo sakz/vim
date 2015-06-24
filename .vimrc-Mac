@@ -77,6 +77,8 @@ map <C-n> :NERDTree<CR>    "设置ctrl+n 快捷打开nerdtree
 Bundle 'bling/vim-airline'
 Bundle 'szw/vim-ctrlspace'
 Bundle 'SuperTab'
+Bundle 'jiangmiao/auto-pairs'   
+Bundle 'scrooloose/nerdcommenter'   
 imap jj <esc>    "双击jj退出编辑模式,c-[ 和c-c也可以实现esc
 
 " All of your Plugins must be added before the following line
